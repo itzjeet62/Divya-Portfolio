@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divya Saharan — Portfolio & Resume Presentation</title>
+  <meta name="description" content="Divya Saharan - Social Media, Content & Digital Marketing Professional Portfolio">
+  
+  <!-- Google Fonts: Bebas Neue, Outfit & Plus Jakarta Sans for high-end professional presentation -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-deck view-stream">
+
+  <!-- Floating Control Bar with Working Navigation Bars -->
+  <header class="app-toolbar" id="appToolbar">
+    <div class="toolbar-brand" id="brandLogoBtn" title="Divya Saharan Portfolio">
+      <div class="brand-avatar">
+        <img src="assets/images/divya_profile.jpg" alt="Divya Saharan" class="brand-avatar-img">
+      </div>
+      <div class="brand-info">
+        <strong>Divya Saharan</strong>
+        <span class="brand-sub">Social Media & Content | B.Sc. Gold Medalist</span>
+      </div>
+    </div>
+
+    <!-- Working Navigation Bars (Home, About, Education, Skills, Experience, Work, Contact) -->
+    <nav class="toolbar-nav" id="toolbarNav" aria-label="Main Navigation">
+      <a href="#slide-01" class="nav-link active" data-slide-target="slide-01" data-index="0">
+        <span class="nav-dot"></span>
+        <span class="nav-text">Home</span>
+      </a>
+      <a href="#slide-about" class="nav-link" data-slide-target="slide-about" data-index="1">
+        <span class="nav-dot"></span>
+        <span class="nav-text">About</span>
+      </a>
+      <a href="#slide-education" class="nav-link" data-slide-target="slide-education" data-index="2">
+        <span class="nav-dot"></span>
+        <span class="nav-text">Education</span>
+      </a>
+      <a href="#slide-skills" class="nav-link" data-slide-target="slide-skills" data-index="3">
+        <span class="nav-dot"></span>
+        <span class="nav-text">Skills</span>
+      </a>
+      <a href="#slide-experience" class="nav-link" data-slide-target="slide-experience" data-index="4">
+        <span class="nav-dot"></span>
+        <span class="nav-text">Experience</span>
+      </a>
+      <a href="#slide-work" class="nav-link" data-slide-target="slide-work" data-index="5">
+        <span class="nav-dot"></span>
+        <span class="nav-text">Work</span>
+      </a>
+      <a href="#slide-contact" class="nav-link" data-slide-target="slide-contact" data-index="6">
+        <span class="nav-dot"></span>
+        <span class="nav-text">Contact</span>
+      </a>
+    </nav>
+
+    <!-- Right Controls: View Modes & Actions -->
+    <div class="toolbar-right-group">
+      <div class="view-switchers">
+        <button class="view-btn active" id="btnViewStream" title="All pages view">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+          <span class="btn-text-hide">All Pages</span>
+        </button>
+        <button class="view-btn" id="btnViewSlide" title="Presentation 1-by-1">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <span class="btn-text-hide">Slides</span>
+        </button>
+        <button class="view-btn" id="btnViewGrid" title="2-Column Grid view">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span class="btn-text-hide">Grid</span>
+        </button>
+      </div>
+
+      <div class="toolbar-actions">
+        <!-- RESUME BUTTON IN HEADER -->
+        <button class="action-btn action-btn-resume" id="btnOpenResume" title="View Full Resume (Curriculum Vitae)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>Resume</span>
+        </button>
+
+        <button class="action-btn" id="btnToggleEdit" title="Click to edit text directly on the page">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          <span id="editBtnText">Edit</span>
+        </button>
+
+        <button class="action-btn" id="btnPrint" title="Print or save as PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slide Deck Navigation (Visible in Presentation Mode) -->
+  <div class="deck-nav" id="deckNav">
+    <button class="nav-arrow" id="navPrev" title="Previous Slide (Left Arrow)">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <div class="slide-indicator" id="slideIndicator">Slide 01 / 07</div>
+    <button class="nav-arrow" id="navNext" title="Next Slide (Right Arrow)">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+  </div>
+
+  <!-- Main Canvas Container -->
+  <main class="deck-canvas" id="deckCanvas">
+
+    <!-- ========================================== -->
+    <!-- SLIDE 01: HERO / COVER                     -->
+    <!-- ========================================== -->
+    <article class="slide-frame slide-dark slide-hero" id="slide-01" data-slide="1">
+      <!-- Top Bar -->
+      <div class="slide-header">
+        <div class="slide-label">Creative Presentation</div>
+        <div class="slide-number">
+          <span class="dash">—</span> 01
+        </div>
+      </div>
+
+      <!-- Center Typography & Layered Portrait -->
+      <div class="hero-body">
+        <!-- Giant PORT FOLIO Text Split -->
+        <div class="hero-title-wrap" aria-label="PORTFOLIO">
+          <div class="hero-text-back">
+            <span class="text-fill">PORT</span><span class="text-stroke">FOLIO</span>
+          </div>
+
+          <!-- Hero Portrait Centerpiece: Real Divya Saharan Portrait -->
+          <div class="hero-model-container">
+            <img src="assets/images/divya_hero.jpg" alt="Divya Saharan Portrait" class="hero-model-img" id="heroModelImg">
+            <div class="image-replace-overlay" title="Click to replace image">
+              <label for="inputReplaceHero">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Change Photo
+              </label>
+              <input type="file" id="inputReplaceHero" accept="image/*" class="sr-only">
+            </div>
+          </div>
+
+          <!-- Foreground Overlay Layer for perfect depth -->
+          <div class="hero-text-front" aria-hidden="true">
+            <span class="text-fill">PORT</span><span class="text-stroke">FOLIO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="slide-footer">
+        <div class="author-block">
+          <h2 class="author-name editable-field" data-placeholder="Enter Your Name">Divya Saharan</h2>
+          <p class="author-role editable-field" data-placeholder="Enter Your Title">Social Media & Content Support | Canva Designer</p>
+        </div>
+        
+        <!-- Hero Resume CTA & Contact -->
+        <div class="hero-contact-block">
+          <button class="slide-resume-pill" id="heroResumeBtn" title="View Divya Saharan's Resume">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>View Resume</span>
+          </button>
+          <a href="mailto:dsaharan749@gmail.com" class="site-link editable-field">dsaharan749@gmail.com</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 02: ABOUT ME (DIVYA SAHARAN)         -->
+    <!-- ========================================== -->
+    <article class="slide-frame slide-dark slide-about" id="slide-about" data-slide="2">
+      <!-- Top Bar -->
+      <div class="slide-header">
+        <div class="slide-label">Creative Presentation • Professional Profile</div>
+        <div class="slide-number">02</div>
+      </div>
+
+      <!-- Split Columns -->
+      <div class="about-body">
+        <!-- Left: Big Name and Description -->
+        <div class="about-left-col">
+          <h2 class="slide-main-heading about-name">
+            DIVYA<br>SAHARAN
+          </h2>
+          <div class="about-desc-box">
+            <p class="slide-body-text editable-field">
+              A <strong>Gold Medalist B.Sc. (PCM) graduate</strong> from Jagannath University, Jaipur with an <strong>8.47 CGPA</strong>. I combine rigorous analytical thinking and quantitative aptitude with high-impact visual storytelling and social media marketing.
+            </p>
+            <p class="slide-body-text editable-field" style="margin-top: 10px;">
+              Currently driving social media and content at Studybase Tech, I specialize in daily feed posting, preparing monthly content calendars, designing branded Canva creatives, and analyzing customer pain points from 60+ daily calls to align sales and marketing with weekly conversion targets.
+            </p>
+          </div>
+
+          <!-- Quick Highlights & Resume Link -->
+          <div class="about-badges-wrap">
+            <span class="about-badge">🏅 Gold Medalist (8.47 CGPA)</span>
+            <span class="about-badge">📍 Jaipur, Rajasthan</span>
+            <span class="about-badge">🗣️ English & Hindi</span>
+            <button class="slide-resume-pill" id="aboutResumeBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>View Full Resume</span>
+            </button>
+          </div>
+
+          <div class="about-bottom-name editable-field">
+            Divya Saharan — Jaipur, India
+          </div>
+        </div>
+
+        <!-- Right: Portrait Artwork (Real Divya Saharan Portrait) -->
+        <div class="about-right-col">
+          <div class="about-img-frame">
+            <img src="assets/images/divya_profile.jpg" alt="Divya Saharan Creative Presentation" class="about-img" id="aboutImg">
+            <div class="image-replace-overlay">
+              <label for="inputReplaceAbout">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Change Photo
+              </label>
+              <input type="file" id="inputReplaceAbout" accept="image/*" class="sr-only">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <div class="footer-left editable-field">Divya Saharan</div>
+        <div class="footer-right editable-field">dsaharan749@gmail.com • +91 9352596096</div>
+      </div>
+    </article>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 03: EDUCATION (FROM RESUME)          -->
+    <!-- ========================================== -->
+    <article class="slide-frame slide-dark slide-education" id="slide-education" data-slide="3">
+      <!-- Top Bar -->
+      <div class="slide-header">
+        <div class="slide-label">Academic Excellence & Foundation</div>
+        <div class="slide-number">03</div>
+      </div>
+
+      <!-- Top Row: Title & Academic Honors Showcase (Replaced jewelry crop with University Gold Medalist Credential) -->
+      <div class="edu-top-row">
+        <div>
+          <span class="edu-eyebrow">Academic Rigor & Quantitative Mindset</span>
+          <h2 class="slide-main-heading">EDUCATION</h2>
+          <span class="edu-sub-tag">University Gold Medalist • Analytical & Problem-Solving Foundation</span>
+        </div>
+        
+        <div class="edu-honors-card">
+          <div class="honors-medal-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
+          <div class="honors-card-content">
+            <span class="honors-kicker">🏅 UNIVERSITY TOPPER</span>
+            <strong class="honors-title">Gold Medalist • CGPA: 8.47</strong>
+            <span class="honors-sub">Jagannath University, Jaipur • B.Sc. (PCM)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row: 3 Educational Columns matching Resume -->
+      <div class="edu-columns-grid">
+        <!-- Item 1: Bachelor of Science -->
+        <div class="timeline-col">
+          <span class="timeline-year editable-field">2022 - 2025</span>
+          <h3 class="timeline-title editable-field">Bachelor of Science (PCM)</h3>
+          <span class="timeline-institution editable-field">Jagannath University, Jaipur</span>
+          <div class="timeline-badge-gold">🏅 Gold Medalist • CGPA: 8.47</div>
+          <p class="timeline-text editable-field">
+            Specialized in Physics, Chemistry & Mathematics. Developed deep mathematical rigor and analytical capabilities applied to data-backed marketing insights and customer trend evaluations.
+          </p>
+        </div>
+
+        <!-- Divider -->
+        <div class="col-divider"></div>
+
+        <!-- Item 2: 12th Class -->
+        <div class="timeline-col">
+          <span class="timeline-year editable-field">2021 - 2022</span>
+          <h3 class="timeline-title editable-field">12th Class (Senior Secondary)</h3>
+          <span class="timeline-institution editable-field">AVM School, Kalana, Rajasthan</span>
+          <div class="timeline-badge-score">Overall Percentage: 83.20%</div>
+          <p class="timeline-text editable-field">
+            Graduated with distinction with core subjects in Science & Mathematics, establishing strong quantitative reasoning and problem-solving skills.
+          </p>
+        </div>
+
+        <!-- Divider -->
+        <div class="col-divider"></div>
+
+        <!-- Item 3: 10th Class -->
+        <div class="timeline-col">
+          <span class="timeline-year editable-field">2019 - 2020</span>
+          <h3 class="timeline-title editable-field">10th Class (Secondary)</h3>
+          <span class="timeline-institution editable-field">Govt. High Secondary School, Kalana</span>
+          <div class="timeline-badge-score">Overall Percentage: 88.00%</div>
+          <p class="timeline-text editable-field">
+            Achieved top percentile honors in academic curriculum, demonstrating consistent dedication, quick learning, and intellectual discipline.
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="slide-footer">
+        <div class="footer-left editable-field">Divya Saharan</div>
+        <div class="footer-right editable-field">dsaharan749@gmail.com • +91 9352596096</div>
+      </div>
+    </article>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 04: CAPABILITIES & SKILLS            -->
+    <!-- ========================================== -->
+    <article class="slide-frame slide-dark slide-skills" id="slide-skills" data-slide="4">
+      <!-- Top Bar -->
+      <div class="slide-header">
+        <div class="slide-label">Core Competencies & Tooling</div>
+        <div class="slide-number">04</div>
+      </div>
+
+      <!-- Title -->
+      <div class="skills-heading-wrap">
+        <h2 class="slide-main-heading">CAPABILITIES & SKILLS</h2>
+      </div>
+
+      <!-- 3 Skill Cards Grid (100% Professional & Directly tailored to Divya's role) -->
+      <div class="skills-grid">
+        <!-- Skill Column 1: Social & Creative (With Real Canva Creative) -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon-pill">
+              <svg class="skill-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3 class="skill-title editable-field">Creative & Social Media</h3>
+          </div>
+          
+          <div class="skill-thumb-wrap" onclick="openLightbox('assets/images/work_thought_of_day.jpg', 'Canva Design • Thought for the Day')" title="Click to enlarge real creative">
+            <img src="assets/images/work_thought_of_day.jpg" alt="Canva Creative Design" class="skill-thumb" id="skillImg1">
+            <span class="skill-badge-tag">🎨 Live Canva Creative</span>
+          </div>
+          
+          <ul class="skill-bullet-list editable-field">
+            <li>• Social Media Management & Brand Growth</li>
+            <li>• Daily Feed Posting & Community Sync</li>
+            <li>• Content Calendar Planning (Monthly)</li>
+            <li>• Canva Creative Design & Visual Assets</li>
+            <li>• High-Impact Content Writing</li>
+          </ul>
+        </div>
+
+        <!-- Skill Column 2: Sales & Growth (Interactive Growth Metric Dashboard) -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon-pill">
+              <svg class="skill-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+            <h3 class="skill-title editable-field">Sales & Growth Capabilities</h3>
+          </div>
+          
+          <!-- Modern Live Data & Lead Generation Widget (Replacing Pearl Necklace) -->
+          <div class="skill-widget-wrap">
+            <div class="growth-widget-header">
+              <div class="widget-metric-badge">
+                <span class="badge-num">60+</span>
+                <span class="badge-label">Calls/Day Analyzed</span>
+              </div>
+              <span class="widget-status-pill">● Active Funnel</span>
+            </div>
+            <div class="growth-widget-chart">
+              <svg viewBox="0 0 200 45" class="growth-mini-svg" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#C2B39E" />
+                    <stop offset="60%" stop-color="#E2D6C6" />
+                    <stop offset="100%" stop-color="#ECDCC3" />
+                  </linearGradient>
+                </defs>
+                <path d="M 0,38 Q 40,35 70,24 T 140,14 T 200,4" fill="none" stroke="url(#chartGrad)" stroke-width="3" stroke-linecap="round" />
+                <circle cx="200" cy="4" r="4" fill="#ECDCC3" />
+              </svg>
+            </div>
+            <div class="growth-widget-footer">
+              <span>Customer Insights → FAQs</span>
+              <strong>+38% Target Sync</strong>
+            </div>
+          </div>
+          
+          <ul class="skill-bullet-list editable-field">
+            <li>• Customer Pain-Point Analysis (60+ calls/day)</li>
+            <li>• Data-Driven Thinking & Reporting</li>
+            <li>• Sales & Marketing Team Alignment</li>
+            <li>• B2B Business Development Support</li>
+            <li>• Conversion Target Optimization</li>
+          </ul>
+        </div>
+
+        <!-- Skill Column 3: Professional Aptitude (Bilingual & Analytical Matrix) -->
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon-pill">
+              <svg class="skill-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="skill-title editable-field">Professional Aptitude</h3>
+          </div>
+          
+          <!-- Modern Professional Matrix Widget (Replacing Blue Heart Earrings) -->
+          <div class="skill-widget-wrap aptitude-widget">
+            <div class="aptitude-row">
+              <span class="aptitude-icon">🗣️</span>
+              <div class="aptitude-detail">
+                <strong>Bilingual Communication</strong>
+                <span>Fluent in English & Hindi</span>
+              </div>
+              <span class="aptitude-score">Fluent</span>
+            </div>
+            <div class="aptitude-row">
+              <span class="aptitude-icon">📐</span>
+              <div class="aptitude-detail">
+                <strong>Quantitative Rigor</strong>
+                <span>B.Sc. PCM Gold Medalist</span>
+              </div>
+              <span class="aptitude-score">Top 1%</span>
+            </div>
+            <div class="aptitude-row">
+              <span class="aptitude-icon">⚡</span>
+              <div class="aptitude-detail">
+                <strong>Team Alignment & Agility</strong>
+                <span>EdTech Campaign Execution</span>
+              </div>
+              <span class="aptitude-score">Fast</span>
+            </div>
+          </div>
+          
+          <ul class="skill-bullet-list editable-field">
+            <li>• Strong Verbal & Written Communication</li>
+            <li>• Quantitative & Analytical Aptitude</li>
+            <li>• Team Collaboration & Fast Execution</li>
+            <li>• Time Management & Problem Solving</li>
+            <li>• <strong>Languages:</strong> English, Hindi</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="slide-footer">
+        <div class="footer-left editable-field">Divya Saharan</div>
+        <div class="footer-right editable-field">dsaharan749@gmail.com • +91 9352596096</div>
+      </div>
+    </article>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 05: WORK EXPERIENCE (FROM RESUME)    -->
+    <!-- ========================================== -->
+    <article class="slide-frame slide-dark slide-experience" id="slide-experience" data-slide="5">
+      <!-- Top Bar -->
+      <div class="slide-header">
+        <div class="slide-label">Career Experience • Studybase Tech</div>
+        <div class="slide-number">05</div>
+      </div>
+
+      <!-- Main Title -->
+      <div class="exp-heading-wrap">
+        <h2 class="slide-main-heading">
+          WORK<br>EXPERIENCE
+        </h2>
+        <span class="exp-sub-lead">Professional Track Record at Studybase Tech Private Limited</span>
+      </div>
+
+      <!-- 3 Experience Timeline Columns detailing her role -->
+      <div class="exp-columns-grid">
+        <!-- Job Col 1 -->
+        <div class="timeline-col">
+          <span class="timeline-year editable-field">June 2026 - Present</span>
+          <h3 class="timeline-title editable-field">Social Media & Content Support</h3>
+          <span class="timeline-institution editable-field">Studybase Tech Private Limited, Jaipur</span>
+          <p class="timeline-text editable-field">
+            • Update the company's social media page with daily feed posts.<br>
+            • Prepare detailed monthly content calendars for multi-channel feed campaigns.
+          </p>
+        </div>
+
+        <div class="col-divider"></div>
+
+        <!-- Job Col 2 -->
+        <div class="timeline-col">
+          <span class="timeline-year editable-field">Core Execution</span>
+          <h3 class="timeline-title editable-field">Creative Design in Canva</h3>
+          <span class="timeline-institution editable-field">Visual Content & Brand Communication</span>
+          <p class="timeline-text editable-field">
+            • Design high-converting social media creatives in Canva.<br>
+            • Maintain brand aesthetics, typography, and clear visual call-to-actions across digital channels.
+          </p>
+        </div>
+
+        <div class="col-divider"></div>
+
+        <!-- Job Col 3 -->
+        <div class="timeline-col">
+          <span class="timeline-year editable-field">Impact & Optimization</span>
+          <h3 class="timeline-title editable-field">Customer Analysis & Sales Alignment</h3>
+          <span class="timeline-institution editable-field">Growth & Lead Generation</span>
+          <p class="timeline-text editable-field">
+            • Analyse customer pain points from 60+ daily outbound calls and turn them into actionable FAQs and content.<br>
+            • Help align sales and marketing teams to consistently meet weekly conversion targets.
+          </p>
+        </div>
+      </div>
+
+      <!-- Slide Footer -->
+      <div class="slide-footer">
+        <div class="footer-left editable-field">Divya Saharan</div>
+        <div class="footer-right editable-field">dsaharan749@gmail.com • +91 9352596096</div>
+      </div>
+    </article>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 06: FEATURED WORK / CANVA CREATIVES  -->
+    <!-- ========================================== -->
+    <article class="slide-frame slide-dark slide-projects" id="slide-work" data-slide="6">
+      <div class="slide-header">
+        <div class="slide-label">Portfolio Showcase • Live Canva Creatives</div>
+        <div class="slide-number">06</div>
+      </div>
+
+      <div class="projects-top-row">
+        <div>
+          <h2 class="slide-main-heading">FEATURED WORK</h2>
+          <span class="project-subtitle">Live Canva Creatives & Social Campaigns for International School, Mansarover (Studybase)</span>
+        </div>
+        <p class="slide-body-text editable-field">
+          A showcase of daily feed creatives, educational trivia, and branded visual campaigns created in Canva to drive student/parent engagement and lead retention.
+        </p>
+      </div>
+
+      <div class="projects-grid projects-grid-4">
+        <!-- Creative 1: Instagram Reel 1 -->
+        <div class="project-card project-card-video" onclick="openVideoReel('DdqyEJFuF8I', 'Creative Feed Reel 01 • Instagram Campaign', 'https://www.instagram.com/reel/DdqyEJFuF8I/')">
+          <div class="project-img-box video-thumb-box">
+            <img src="assets/images/reel_1_thumb.jpg" alt="Instagram Video Reel 01" class="project-img">
+            <div class="video-play-overlay">
+              <div class="play-btn-circle" title="Click to Play Video">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+              </div>
+            </div>
+            <span class="video-badge-tag">▶ Instagram Reel</span>
+          </div>
+          <div class="project-meta">
+            <div class="project-tag-row">
+              <span class="project-tag editable-field">Social Media Reel</span>
+              <a href="https://www.instagram.com/reel/DdqyEJFuF8I/" target="_blank" rel="noopener" class="reel-external-link" onclick="event.stopPropagation();" title="Open on Instagram">↗ View on IG</a>
+            </div>
+            <h3 class="project-title editable-field">Creative Feed Reel 01</h3>
+            <p class="project-desc editable-field">Engaging social media reel created for digital reach, high audience retention, and viral student/parent engagement on Instagram.</p>
+          </div>
+        </div>
+
+        <!-- Creative 2: Instagram Reel 2 -->
+        <div class="project-card project-card-video" onclick="openVideoReel('DeO0PsKz0Bn', 'Creative Feed Reel 02 • Content Marketing', 'https://www.instagram.com/reel/DeO0PsKz0Bn/')">
+          <div class="project-img-box video-thumb-box">
+            <img src="assets/images/reel_2_thumb.jpg" alt="Instagram Video Reel 02" class="project-img">
+            <div class="video-play-overlay">
+              <div class="play-btn-circle" title="Click to Play Video">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+              </div>
+            </div>
+            <span class="video-badge-tag">▶ Instagram Reel</span>
+          </div>
+          <div class="project-meta">
+            <div class="project-tag-row">
+              <span class="project-tag editable-field">Content Marketing Reel</span>
+              <a href="https://www.instagram.com/reel/DeO0PsKz0Bn/" target="_blank" rel="noopener" class="reel-external-link" onclick="event.stopPropagation();" title="Open on Instagram">↗ View on IG</a>
+            </div>
+            <h3 class="project-title editable-field">Creative Feed Reel 02</h3>
+            <p class="project-desc editable-field">Dynamic visual reel crafted with structured hooks and messaging to boost community interaction and brand visibility.</p>
+          </div>
+        </div>
+
+        <!-- Creative 3: Sharks older than trees -->
+        <div class="project-card">
+          <div class="project-img-box" onclick="openLightbox('assets/images/work_shark.jpg', 'Did You Know? • Sharks vs Trees (Canva Design)')">
+            <img src="assets/images/work_shark.jpg" alt="Sharks vs Trees Science Trivia" class="project-img">
+            <span class="zoom-pill">🔍 Enlarge</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-tag editable-field">High-Engagement Science</span>
+            <h3 class="project-title editable-field">Sharks Older Than Trees</h3>
+            <p class="project-desc editable-field">High-contrast oceanic palette and friendly character illustration sharing 400M-year evolutionary facts for viral social reach.</p>
+          </div>
+        </div>
+
+        <!-- Creative 4: Baby Bones -->
+        <div class="project-card">
+          <div class="project-img-box" onclick="openLightbox('assets/images/work_baby_bones.jpg', 'Did You Know? • Human Anatomy (Canva Design)')">
+            <img src="assets/images/work_baby_bones.jpg" alt="Baby Bones Biology Fact" class="project-img">
+            <span class="zoom-pill">🔍 Enlarge</span>
+          </div>
+          <div class="project-meta">
+            <span class="project-tag editable-field">Child Biology Fun Fact</span>
+            <h3 class="project-title editable-field">Bone Fusion in Growth</h3>
+            <p class="project-desc editable-field">Warm pastel infant illustration breaking down the 270-to-206 bone transformation during human development.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <div class="footer-left editable-field">Divya Saharan</div>
+        <div class="footer-right editable-field">dsaharan749@gmail.com • +91 9352596096</div>
+      </div>
+    </article>
+
+    <!-- ========================================== -->
+    <!-- SLIDE 07: CONTACT & RESUME ACCESS          -->
+    <!-- ========================================== -->
+    <article class="slide-frame slide-dark slide-contact" id="slide-contact" data-slide="7">
+      <div class="slide-header">
+        <div class="slide-label">Get In Touch • Collaborations</div>
+        <div class="slide-number">07</div>
+      </div>
+
+      <div class="contact-body">
+        <div class="contact-left-col">
+          <h2 class="slide-main-heading">
+            LET'S WORK<br>TOGETHER
+          </h2>
+          <p class="slide-body-text editable-field">
+            Open to opportunities in <strong>Social Media Management</strong>, <strong>Content Strategy</strong>, and <strong>Creative Design</strong>. Available for full-time and high-impact digital marketing roles.
+          </p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <span class="info-label">Name:</span>
+              <span class="info-val editable-field">Divya Saharan</span>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-label">Email:</span>
+              <a href="mailto:dsaharan749@gmail.com" class="info-val editable-field">dsaharan749@gmail.com</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-label">Phone:</span>
+              <a href="tel:9352596096" class="info-val editable-field">+91 9352596096</a>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-label">Location:</span>
+              <span class="info-val editable-field">Jaipur / Kalana, Rajasthan, India</span>
+            </div>
+            <div class="contact-info-item">
+              <span class="info-label">Languages:</span>
+              <span class="info-val editable-field">English, Hindi</span>
+            </div>
+          </div>
+
+          <!-- Direct Resume Opener CTA -->
+          <div style="margin-top: 14px;">
+            <button class="slide-resume-pill pill-large" id="contactResumeBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>📄 View / Print Full Resume</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-right-col">
+          <form class="contact-quick-form" id="contactForm" onsubmit="event.preventDefault(); alert('Thank you Divya will get back to you shortly!');">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <div class="form-field">
+              <label for="cName">Your Name</label>
+              <input type="text" id="cName" placeholder="e.g. Hiring Manager / Recruiter" required>
+            </div>
+            <div class="form-field">
+              <label for="cEmail">Your Email</label>
+              <input type="email" id="cEmail" placeholder="e.g. recruiter@company.com" required>
+            </div>
+            <div class="form-field">
+              <label for="cMsg">Message / Opportunity Details</label>
+              <textarea id="cMsg" rows="3" placeholder="Tell me about your team, role, or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <div class="footer-left editable-field">Divya Saharan</div>
+        <div class="footer-right editable-field">dsaharan749@gmail.com • +91 9352596096</div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- RESUME MODAL VIEWER OVERLAY                                      -->
+  <!-- ================================================================= -->
+  <div class="resume-modal-backdrop" id="resumeModal" aria-hidden="true">
+    <div class="resume-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+      <!-- Modal Header -->
+      <div class="resume-modal-header">
+        <div class="resume-header-info">
+          <h2 id="resumeTitle">Divya Saharan — Curriculum Vitae</h2>
+          <span>Professional Resume Document</span>
+        </div>
+        <div class="resume-modal-actions">
+          <button class="resume-action-btn" id="btnPrintModalResume" title="Print or save as PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="resume-close-btn" id="btnCloseResumeModal" title="Close Resume (Esc)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Formatted Authentic Resume Sheet (Paper Aesthetic) -->
+      <div class="resume-sheet" id="resumeSheet">
+        <!-- Resume Header with Profile Photo -->
+        <header class="sheet-header">
+          <div class="sheet-header-flex">
+            <div class="sheet-title-col">
+              <h1 class="sheet-name">DIVYA SAHARAN</h1>
+              <div class="sheet-contact-row">
+                <span>📞 +91 9352596096</span>
+                <span class="sep">•</span>
+                <span>✉️ dsaharan749@gmail.com</span>
+                <span class="sep">•</span>
+                <span>📍 Jaipur / Kalana, Rajasthan</span>
+              </div>
+            </div>
+            <div class="sheet-avatar-col">
+              <img src="assets/images/divya_profile.jpg" alt="Divya Saharan" class="sheet-avatar-img">
+            </div>
+          </div>
+        </header>
+
+        <hr class="sheet-divider">
+
+        <!-- Profile Section -->
+        <section class="sheet-section">
+          <h3 class="sheet-section-title">PROFILE:</h3>
+          <p class="sheet-text">
+            Analytical, growth-focused digital marketing and content professional with hands-on experience in social media management, content planning, creative design in Canva and lead generation. <strong>Gold Medalist B.Sc. (PCM) graduate</strong> with strong mathematical and analytical skills, who turns customer conversations and feedback into data-backed insights, targeted content and better conversions.
+          </p>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="sheet-section">
+          <h3 class="sheet-section-title">WORK EXPERIENCE:</h3>
+          <div class="sheet-item">
+            <div class="sheet-item-header">
+              <strong>1. Studybase Tech Private Limited, Jaipur</strong>
+              <span class="sheet-dates">(June 2026-Present)</span>
+            </div>
+            <div class="sheet-role">Role: Social Media & Content Support</div>
+            <ul class="sheet-bullet-list">
+              <li>Update the company's social media page with daily feed posts.</li>
+              <li>Prepare monthly content calendars for feed posts.</li>
+              <li>Design social media creatives in Canva.</li>
+              <li>Analyse customer pain points from 60+ daily outbound calls and turn them into FAQs and content.</li>
+              <li>Help align sales and marketing and meet weekly conversion targets.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Sales and Growth Capabilities -->
+        <section class="sheet-section">
+          <h3 class="sheet-section-title">Sales and Growth Capabilities:</h3>
+          <div class="sheet-two-col">
+            <ul class="sheet-bullet-list">
+              <li>Social Media Management</li>
+              <li>Daily Feed Posting</li>
+              <li>Content Calendar Planning</li>
+              <li>Canva Creative Design</li>
+              <li>Content Writing</li>
+            </ul>
+            <ul class="sheet-bullet-list">
+              <li>B2B Business Development</li>
+              <li>Customer Pain-Point Analysis</li>
+              <li>Data-Driven Thinking</li>
+              <li>Sales-Marketing Alignment</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="sheet-section">
+          <h3 class="sheet-section-title">EDUCATION</h3>
+          
+          <div class="sheet-edu-item">
+            <div class="sheet-edu-row">
+              <strong>Bachelor of Science (PCM) :</strong>
+              <span class="sheet-dates">(2022-2025)</span>
+            </div>
+            <div class="sheet-edu-sub">
+              • Jagannath University, Jaipur (<strong>Gold Medalist</strong>, Overall CGPA: <strong>8.47</strong>)
+            </div>
+          </div>
+
+          <div class="sheet-edu-item">
+            <div class="sheet-edu-row">
+              <strong>12 Class:</strong>
+              <span class="sheet-dates">(2021-2022)</span>
+            </div>
+            <div class="sheet-edu-sub">
+              • AVM School, Kalana, Rajasthan (Overall Percentage: <strong>83.20%</strong>)
+            </div>
+          </div>
+
+          <div class="sheet-edu-item">
+            <div class="sheet-edu-row">
+              <strong>10 Class:</strong>
+              <span class="sheet-dates">(2019-2020)</span>
+            </div>
+            <div class="sheet-edu-sub">
+              • Govt. High secondary School, Kalana, Rajasthan (Overall Percentage: <strong>88%</strong>)
+            </div>
+          </div>
+        </section>
+
+        <!-- Professional Skills -->
+        <section class="sheet-section">
+          <h3 class="sheet-section-title">PROFESSIONAL SKILLS</h3>
+          <div class="sheet-two-col">
+            <ul class="sheet-bullet-list">
+              <li>Strong Communication</li>
+              <li>Quantitative and Analytical</li>
+              <li>Aptitude Teamwork</li>
+            </ul>
+            <ul class="sheet-bullet-list">
+              <li>Time Management</li>
+              <li>Problem Solving</li>
+              <li>Quick Learner</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="sheet-section">
+          <h3 class="sheet-section-title">LANGUAGES</h3>
+          <ul class="sheet-bullet-list">
+            <li>English, Hindi</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- VIDEO REEL LIGHTBOX MODAL (FOR PLAYING INSTAGRAM REELS)           -->
+  <!-- ================================================================= -->
+  <div class="video-lightbox-backdrop" id="videoLightbox" aria-hidden="true">
+    <div class="video-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="videoReelTitle">
+      <div class="video-lightbox-header">
+        <div class="video-header-left">
+          <span class="video-badge-pill">▶ Instagram Reel Player</span>
+          <h3 id="videoReelTitle" class="video-modal-title">Instagram Video Reel</h3>
+        </div>
+        <div class="video-header-actions">
+          <a href="#" id="videoDirectLink" target="_blank" rel="noopener noreferrer" class="video-open-ig-btn" title="Open in Instagram App">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Instagram ↗</span>
+          </a>
+          <button class="lightbox-close-btn" id="btnCloseVideoLightbox" title="Close Video (Esc)">&times;</button>
+        </div>
+      </div>
+      <div class="video-lightbox-body" id="videoLightboxBody">
+        <iframe src="" class="reel-video-iframe" id="reelVideoIframe" frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- IMAGE LIGHTBOX MODAL (FOR FULL CREATIVE VIEW)                    -->
+  <!-- ================================================================= -->
+  <div class="image-lightbox-backdrop" id="imageLightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true">
+      <div class="lightbox-header">
+        <span id="lightboxCaption">Creative Preview</span>
+        <button class="lightbox-close-btn" id="btnCloseLightbox" title="Close Preview">&times;</button>
+      </div>
+      <div class="lightbox-content">
+        <img src="" alt="Enlarged creative preview" id="lightboxImg">
+      </div>
+    </div>
+  </div>
+
+  <!-- Help & Hint Floating Badge -->
+  <div class="floating-hint" id="floatingHint">
+    <div class="hint-icon">✨</div>
+    <div class="hint-content">
+      <strong>Divya Saharan's Real Work Live!</strong>
+      <span>All 4 actual Canva creatives are showcased in Slide 07. Click any creative to view it full size!</span>
+    </div>
+    <button class="hint-close" onclick="document.getElementById('floatingHint').style.display='none'">&times;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
